@@ -1,4 +1,5 @@
-public class Student  extends Person{
+package entities;
+
     public class Student {
         static private int id;
         private String name;
