@@ -1,6 +1,5 @@
-package entities;
 
-    public class Student {
+    public class Student extends Person {
         static private int id;
         private String name;
         private String surname;
@@ -61,4 +60,4 @@ package entities;
             return (gpa > 2.67) ? 36660.00 : 0.00;
         }
     }
-}
+

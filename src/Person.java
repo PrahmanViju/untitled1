@@ -1,24 +1,13 @@
-package entities;
-
-public class Employee  extends entities.Person {
+public class Person implements Payable {
     static private int id;
     private String name;
     private String surname;
-    private String position;
-    private double salary;
-    public Employee(){
 
-    }
 
-    public Employee(String name, String surname) {
-        //setId(id);
+    public Person(int id, String name, String surname) {
+        setId(id);
         setName(name);
         setSurname(surname);
-    }
-
-    public Employee(int id, String name, String surname) {
-        this(name, surname);
-        setId(id);
     }
 
     public int getId(){
@@ -53,6 +42,10 @@ public class Employee  extends entities.Person {
     public String toString() {
         return "student:" + id +  name + surname;
     }
+    @Override
+    public double getPaymentAmount() {
+        return 0.00;
+    }
 
 
 
@@ -61,10 +54,4 @@ public class Employee  extends entities.Person {
     public String getPosition(){
         return "";
     }
-
-    @Override
-    public double getPaymentAmount() {
-        return salary;
-    }
 }
-
