@@ -1,4 +1,4 @@
-
+    package entities;
     public class Student extends Person {
         static private int id;
         private String name;
@@ -6,12 +6,14 @@
         private double gpa;
 
         private static int counter = 0;
-        Student(){
+        public Student(){
+            super();
             id = ++counter;
         }
 
 
-        Student(int id,String name, String surname,double  gpa){
+        public Student(int id,String name, String surname,double  gpa){
+            super();
             setId(++counter);
             setName(name);
             setSurname(surname);
@@ -25,7 +27,7 @@
         }
 
         public void setId(int id){
-            this.id = id;
+            Student.id = id;
         }
 
         public String getName(){
